@@ -37,7 +37,12 @@ import ycm_core
 flags = [
         '-Wall',
         '-std=c++11',
-        '-stdlib=libc++',
+#        '-stdlib=libc++',
+        '-stdlib=libstdc++',
+        '-I',
+        '/usr/include/x86_64-linux-gnu/c++/4.8/',
+        '-I',
+        '/usr/include/c++/4.8',
         '-x',
         'c++',
         '-I',
