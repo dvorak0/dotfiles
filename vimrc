@@ -30,6 +30,7 @@ set incsearch
 set splitbelow
 set splitright
 
+set t_Co=256
 colorscheme wombat256mod
 
 highlight ExtraWhitespace ctermbg=red guibg=red
