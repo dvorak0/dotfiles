@@ -31,7 +31,6 @@ set splitbelow
 set splitright
 
 set t_Co=256
-colorscheme wombat256mod
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -60,26 +59,23 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'wombat256.vim'
+
 Plugin 'godlygeek/tabular'
 
 Plugin 'a.vim'
-
-"Plugin 'Yggdroot/indentLine'
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
 
-
 Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 "let g:formatprg_c = "astyle"
 "let g:formatprg_args_c = "--pad-oper --unpad-paren -pcHs4"
 
-
 Plugin 'kien/ctrlp.vim'
-
 let g:ctrlp_map = ','
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
@@ -89,3 +85,4 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 call vundle#end()
 filetype plugin indent on
+colorscheme wombat256mod
