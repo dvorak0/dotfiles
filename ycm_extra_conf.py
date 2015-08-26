@@ -51,6 +51,10 @@ flags = [
         '/opt/ros/indigo/include',
         '-I',
         '/usr/include',
+        '-I',
+        '/usr/local/include/',
+        '-I',
+        '/opt/mvIMPACT_acquire'
         ]
 
 
