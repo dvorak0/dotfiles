@@ -58,6 +58,9 @@ func! CompileRunGpp()
     exec "!catkin_make"
 endfunc
 
+nmap dv df_
+nmap cv cf_
+
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -93,7 +96,9 @@ nmap k <Plug>(accelerated_jk_gk)
 
 Plugin 'yonchu/accelerated-smooth-scroll'
 
-Plugin 'mhinz/vim-startify'
+"Plugin 'mhinz/vim-startify'
+
+Plugin 'raymond-w-ko/vim-lua-indent'
 
 
 call vundle#end()
