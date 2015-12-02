@@ -1,42 +1,44 @@
-call plug#begin()
+set nocompatible
+filetype off
 
-Plug 'vim-scripts/wombat256.vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plugin 'VundleVim/Vundle.vim'
 
-Plug 'godlygeek/tabular'
+Plugin 'wombat256.vim'
 
-Plug 'vim-scripts/a.vim'
+Plugin 'sheerun/vim-polyglot'
 
-Plug 'Valloric/YouCompleteMe' , { 'do': './install.py --clang-completer' }
+Plugin 'godlygeek/tabular'
+
+Plugin 'a.vim'
+
+Plugin 'Valloric/YouCompleteMe'
 let g:ycm_confirm_extra_conf=0
 
-Plug 'Chiel92/vim-autoformat'
+Plugin 'Chiel92/vim-autoformat'
 let g:formatdef_clangformat = '"clang-format-3.6 -style=file"'
 map ff :Autoformat<CR>
 
-
-Plug 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = ','
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/build/*,*/tmp/*,*.so,*.swp,*.zip,*.o
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-Plug 'rhysd/accelerated-jk'
+Plugin 'rhysd/accelerated-jk'
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-Plug 'yonchu/accelerated-smooth-scroll'
+Plugin 'yonchu/accelerated-smooth-scroll'
 
-"Plug 'mhinz/vim-startify'
+"Plugin 'mhinz/vim-startify'
 
-Plug 'raymond-w-ko/vim-lua-indent'
+Plugin 'raymond-w-ko/vim-lua-indent'
 
-call plug#end()
-
-
-set nocompatible
+call vundle#end()
 filetype plugin indent on
 syntax on
 
