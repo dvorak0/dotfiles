@@ -8,10 +8,10 @@ Plug 'godlygeek/tabular'
 
 Plug 'vim-scripts/a.vim'
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe' , { 'do': './install.py --clang-completer' }
 let g:ycm_confirm_extra_conf=0
 
-Plug 'Chiel92/vim-autoformat' , { 'do': './install.py' }
+Plug 'Chiel92/vim-autoformat'
 let g:formatdef_clangformat = '"clang-format-3.6 -style=file"'
 map ff :Autoformat<CR>
 
