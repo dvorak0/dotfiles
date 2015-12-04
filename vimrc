@@ -6,20 +6,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'wombat256.vim'
+Plugin 'rhysd/accelerated-jk'
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
 
-Plugin 'sheerun/vim-polyglot'
-
-Plugin 'godlygeek/tabular'
+Plugin 'yonchu/accelerated-smooth-scroll'
 
 Plugin 'a.vim'
-
-Plugin 'Valloric/YouCompleteMe'
-let g:ycm_confirm_extra_conf=0
-
-Plugin 'Chiel92/vim-autoformat'
-let g:formatdef_clangformat = '"clang-format-3.6 -style=file"'
-map ff :Autoformat<CR>
 
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = ','
@@ -28,22 +21,26 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/build/*,*/tmp/*,*.so,*.swp,*.zip,*.o
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-Plugin 'rhysd/accelerated-jk'
-nmap j <Plug>(accelerated_jk_gj)
-nmap k <Plug>(accelerated_jk_gk)
 
-Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
-"Plugin 'mhinz/vim-startify'
+"Plugin 'wombat256.vim'
+Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'raymond-w-ko/vim-lua-indent'
+Plugin 'godlygeek/tabular'
+Plugin 'Chiel92/vim-autoformat'
+let g:formatdef_clangformat = '"clang-format-3.6 -style=file"'
+map ff :Autoformat<CR>
+
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_confirm_extra_conf=0
 
 call vundle#end()
 filetype plugin indent on
-syntax on
-
-colorscheme wombat256mod
-set t_Co=256
+syntax enable
+set background=dark
+set t_Co=16
+colorscheme solarized
 
 set nu
 set backupdir=~/.vim/vbackup/
@@ -94,5 +91,3 @@ func! CompileRunGpp()
 endfunc
 
 autocmd BufRead,BufNewFile *.launch setfiletype xml
-
-
