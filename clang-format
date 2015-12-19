@@ -58,6 +58,6 @@ ForEachMacros:   [ foreach, Q_FOREACH, BOOST_FOREACH ]
 SpaceBeforeParens: ControlStatements
 DisableFormat:   false
 
-ColumnLimit:     0
+ColumnLimit:     10000
 IndentWidth:     4
 BreakBeforeBraces: Allman
